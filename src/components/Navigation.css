@@ -1,0 +1,142 @@
+.navigation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: #2D3436;
+}
+
+.navigation-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.navigation-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FF6B6B;
+  margin-bottom: 10px;
+}
+
+.navigation-header p {
+  font-size: 1.1rem;
+  color: #636E72;
+}
+
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.nav-section {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F5 100%);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2D3436;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 107, 107, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 100%);
+}
+
+.nav-icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  width: 40px;
+  text-align: center;
+}
+
+.nav-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2D3436;
+}
+
+.nav-info p {
+  font-size: 0.9rem;
+  color: #636E72;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation-container {
+    padding: 15px;
+  }
+  
+  .navigation-header h1 {
+    font-size: 2rem;
+  }
+  
+  .navigation-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .nav-section {
+    padding: 20px;
+  }
+  
+  .nav-link {
+    padding: 12px;
+  }
+  
+  .nav-icon {
+    font-size: 1.5rem;
+    margin-right: 12px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav-section {
+    padding: 15px;
+  }
+  
+  .nav-link {
+    padding: 10px;
+  }
+  
+  .nav-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    width: 30px;
+  }
+}

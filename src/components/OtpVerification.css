@@ -1,0 +1,268 @@
+.otp-verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.otp-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.otp-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.otp-header h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.otp-content {
+  text-align: center;
+}
+
+.otp-description {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.otp-email {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.otp-form {
+  margin-bottom: 30px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.otp-input:hover {
+  border-color: #667eea;
+}
+
+.otp-verify-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.otp-verify-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.otp-verify-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.otp-verify-button.loading {
+  pointer-events: none;
+}
+
+.otp-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.otp-resend {
+  text-align: center;
+}
+
+.otp-resend p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.resend-link {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.resend-link.active:hover {
+  color: #764ba2;
+}
+
+.resend-link.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.resend-timer {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Dark mode support */
+.dark-mode .otp-verification-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.dark-mode .otp-card {
+  background: #1f1f1f;
+  color: white;
+}
+
+.dark-mode .otp-header h2 {
+  color: white;
+}
+
+.dark-mode .otp-description {
+  color: #ccc;
+}
+
+.dark-mode .back-button {
+  color: #ccc;
+}
+
+.dark-mode .back-button:hover {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .otp-input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: white;
+}
+
+.dark-mode .otp-input:focus {
+  border-color: #667eea;
+  background: #333;
+}
+
+.dark-mode .otp-resend p {
+  color: #ccc;
+}
+
+.dark-mode .resend-link.disabled {
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .otp-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .otp-inputs {
+    gap: 8px;
+  }
+  
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .otp-header h2 {
+    font-size: 20px;
+  }
+}

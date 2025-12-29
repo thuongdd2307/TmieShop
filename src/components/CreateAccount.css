@@ -1,0 +1,472 @@
+.create-account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 50%, #FFD6D6 100%);
+  padding: 20px;
+}
+
+.create-account-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.create-account-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.create-account-header h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.create-account-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.social-signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+  font-size: 18px;
+}
+
+.google-btn:hover {
+  border-color: #4285f4;
+  background: #f8f9fa;
+}
+
+.facebook-btn:hover {
+  border-color: #1877f2;
+  background: #f8f9fa;
+}
+
+.apple-btn:hover {
+  border-color: #000;
+  background: #f8f9fa;
+}
+
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.create-account-form {
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input.error {
+  border-color: #e74c3c;
+  background: #fdf2f2;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.error-message {
+  display: block;
+  margin-top: 5px;
+  color: #e74c3c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-options {
+  margin-bottom: 25px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkmark {
+  background: #FF6B6B;
+  border-color: #FF6B6B;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkmark::after {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-account-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+.create-account-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.create-account-button.loading {
+  pointer-events: none;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.create-account-footer {
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.signin-text {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.signin-link {
+  background: none;
+  border: none;
+  color: #FF6B6B;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.signin-link:hover {
+  color: #FF5252;
+  text-decoration: underline;
+}
+
+.terms-text {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.terms-link {
+  background: none;
+  border: none;
+  color: #FF6B6B;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.terms-link:hover {
+  color: #FF5252;
+}
+
+/* Dark mode support */
+.dark-mode .create-account-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.dark-mode .create-account-card {
+  background: #1f1f1f;
+  color: white;
+}
+
+.dark-mode .create-account-header h2 {
+  color: white;
+}
+
+.dark-mode .create-account-header p {
+  color: #ccc;
+}
+
+.dark-mode .back-button {
+  color: #ccc;
+}
+
+.dark-mode .back-button:hover {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .social-btn {
+  background: #2a2a2a;
+  border-color: #444;
+  color: white;
+}
+
+.dark-mode .social-btn:hover {
+  background: #333;
+  border-color: #FF6B6B;
+}
+
+.dark-mode .divider::before {
+  background: #444;
+}
+
+.dark-mode .divider span {
+  background: #1f1f1f;
+  color: #ccc;
+}
+
+.dark-mode .form-label {
+  color: white;
+}
+
+.dark-mode .form-input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: white;
+}
+
+.dark-mode .form-input:focus {
+  background: #333;
+  border-color: #FF6B6B;
+}
+
+.dark-mode .password-toggle {
+  color: #ccc;
+}
+
+.dark-mode .password-toggle:hover {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .checkbox-container {
+  color: #ccc;
+}
+
+.dark-mode .checkmark {
+  border-color: #444;
+}
+
+.dark-mode .signin-text {
+  color: #ccc;
+}
+
+.dark-mode .terms-text {
+  color: #999;
+}
+
+.dark-mode .create-account-footer {
+  border-top-color: #444;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .create-account-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .create-account-header h2 {
+    font-size: 20px;
+  }
+  
+  .social-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  
+  .form-input {
+    padding: 10px 12px;
+  }
+  
+  .create-account-button {
+    padding: 12px;
+  }
+}

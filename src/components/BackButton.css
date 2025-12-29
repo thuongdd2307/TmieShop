@@ -1,0 +1,76 @@
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 100%);
+  border-color: rgba(255, 107, 107, 0.5);
+  transform: translateX(-2px);
+}
+
+.back-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.back-text {
+  white-space: nowrap;
+}
+
+/* Variant styles */
+.back-button.primary {
+  background-color: #FF6B6B;
+  color: white;
+  border-color: #FF6B6B;
+}
+
+.back-button.primary:hover {
+  background-color: #FF5252;
+  border-color: #FF5252;
+}
+
+.back-button.outline {
+  background-color: transparent;
+  color: #FF6B6B;
+  border-color: #FF6B6B;
+}
+
+.back-button.outline:hover {
+  background-color: #FF6B6B;
+  color: white;
+}
+
+.back-button.minimal {
+  border: none;
+  padding: 4px 8px;
+  color: #666;
+}
+
+.back-button.minimal:hover {
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .back-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .back-icon {
+    font-size: 14px;
+  }
+}

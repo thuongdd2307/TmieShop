@@ -1,0 +1,408 @@
+.order-management {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.order-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.tab-button.active {
+  color: #ff6b6b;
+  border-bottom-color: #ff6b6b;
+  background-color: #fff5f5;
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.status-filter label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.status-filter select {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.status-filter select:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 18px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.order-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.order-date {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.rental-period {
+  font-size: 13px;
+  color: #666;
+  margin: 3px 0 0 0;
+  font-style: italic;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-shipping {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-active {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-overdue {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-returned {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.order-items {
+  padding: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.item-price {
+  font-weight: 500;
+  color: #ff6b6b;
+}
+
+.order-summary {
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+}
+
+.total-amount {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.view-detail-btn,
+.cancel-order-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-detail-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.view-detail-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-1px);
+}
+
+.cancel-order-btn {
+  background-color: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.cancel-order-btn:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+}
+
+.rental-deadline {
+  padding: 12px 20px;
+  margin: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rental-deadline.normal {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.rental-deadline.urgent {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.rental-deadline .overdue {
+  font-weight: 600;
+}
+
+.extend-rental-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.extend-rental-btn:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-management {
+    padding: 15px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .tab-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+  }
+  
+  .view-detail-btn,
+  .cancel-order-btn,
+  .extend-rental-btn {
+    width: 100%;
+  }
+  
+  .status-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .status-filter select {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-management {
+    padding: 10px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .tab-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .order-card {
+    border-radius: 8px;
+  }
+  
+  .order-header,
+  .order-items,
+  .order-summary,
+  .order-actions {
+    padding: 15px;
+  }
+}
