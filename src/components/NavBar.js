@@ -105,6 +105,20 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/blog" className={`nav-link ${isActive('/blog') ? 'active' : ''}`}>
+                Blog
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/livestream" className={`nav-link ${isActive('/livestream') ? 'active' : ''}`}>
+                <span className="livestream-icon">
+                  📹
+                  <span className="live-indicator-nav"></span>
+                </span>
+                Livestream
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/cart" className={`nav-link cart-link ${isActive('/cart') ? 'active' : ''}`}>
                 <span className="cart-icon">
                   🛒

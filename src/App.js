@@ -14,6 +14,11 @@ import Navigation from './components/Navigation';
 import BackButton from './components/BackButton';
 import OrderManagement from './components/OrderManagement';
 import UserProfile from './components/UserProfile';
+import BlogPage from './components/BlogPage';
+import BlogPostDetail from './components/BlogPostDetail';
+import StreamList from './components/StreamList';
+import StreamCreator from './components/StreamCreator';
+import LiveStreamPage from './components/LiveStreamPage';
 import translations from './translations/translations';
 import './App.css';
 
@@ -131,6 +136,66 @@ const UserProfileWrapper = () => {
   );
 };
 
+// Create a wrapper component for BlogPage to handle navigation and props
+const BlogPageWrapper = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+  
+  return (
+    <BlogPage
+      currentLanguage={currentLanguage}
+      translations={translations}
+    />
+  );
+};
+
+// Create a wrapper component for BlogPostDetail to handle navigation and props
+const BlogPostDetailWrapper = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+  
+  return (
+    <BlogPostDetail
+      currentLanguage={currentLanguage}
+      translations={translations}
+    />
+  );
+};
+
+// Create a wrapper component for StreamList to handle navigation and props
+const StreamListWrapper = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+  
+  return (
+    <StreamList
+      currentLanguage={currentLanguage}
+      translations={translations}
+    />
+  );
+};
+
+// Create a wrapper component for StreamCreator to handle navigation and props
+const StreamCreatorWrapper = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+  
+  return (
+    <StreamCreator
+      currentLanguage={currentLanguage}
+      translations={translations}
+    />
+  );
+};
+
+// Create a wrapper component for LiveStreamPage to handle navigation and props
+const LiveStreamPageWrapper = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+  
+  return (
+    <LiveStreamPage
+      currentLanguage={currentLanguage}
+      translations={translations}
+    />
+  );
+};
+
 function App() {
   return (
     <Router>
@@ -144,6 +209,11 @@ function App() {
           <Route path="/cart" element={<MainLayout><Cart /></MainLayout>} />
           <Route path="/orders" element={<MainLayout><OrderManagementWrapper /></MainLayout>} />
           <Route path="/profile" element={<MainLayout><UserProfileWrapper /></MainLayout>} />
+          <Route path="/blog" element={<MainLayout><BlogPageWrapper /></MainLayout>} />
+          <Route path="/blog/:postId" element={<MainLayout><BlogPostDetailWrapper /></MainLayout>} />
+          <Route path="/livestream" element={<MainLayout><StreamListWrapper /></MainLayout>} />
+          <Route path="/livestream/:streamId" element={<MainLayout><LiveStreamPageWrapper /></MainLayout>} />
+          <Route path="/create-stream" element={<MainLayout><StreamCreatorWrapper /></MainLayout>} />
           
           {/* Auth routes without NavBar */}
           <Route path="/login" element={<AuthLayout><Login /></AuthLayout>} />
